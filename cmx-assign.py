@@ -72,11 +72,24 @@ args     = parser.parse_args()
 log      = Logger.get()
 
 # AR directories/files
-targindir= '/global/cfs/projectdirs/desi/target/catalogs/'+args.dr+'/'+args.dtver+'/targets/cmx/'
-skyindir = '/global/cfs/projectdirs/desi/target/catalogs/'+args.dr+'/'+args.dtver+'/skies/'
-gfaindir = '/global/cfs/projectdirs/desi/target/catalogs/'+args.dr+'/'+args.dtver+'/gfas/'
-tmpdir   = os.getenv('CSCRATCH')+'/tmpdir/'
-tilefn   = os.getenv('DESIMODEL')+'/data/footprint/desi-tiles.fits'
+
+hostname = os.getenv('HOSTNAME')
+if 'desi' in hostname:
+        path_to_targets = '/data/target/catalogs/'
+if 'cori' in hostname:
+        path_to_targets = '/global/cfs/projectdirs/desi/target/catalogs'
+
+print(path_to_targets)
+targindir= os.path.join(path_to_targets, args.dr, args.dtver, 'targets/cmx')
+skyindir = os.path.join(path_to_targets, args.dr, args.dtver, 'skies')
+gfaindir = os.path.join(path_to_targets, args.dr, args.dtver, 'gfas')
+print('as', targindir)
+
+try:
+        tmpdir   = os.getenv('CSCRATCH')+'/tmpdir/'
+except:
+        tmpdir   = '/tmp'
+tilefn   = os.path.join(os.getenv('DESIMODEL'),'data/footprint/desi-tiles.fits')
 
 start    = time()
 log.info('{:.1f}s\tstart'.format(time()-start))
@@ -104,7 +117,7 @@ if (args.obscon not in ['dark','bright','dark,bright']):
 	log.error('args.obscon not in dark or bright or "dark,bright"; exiting')
 	sys.exit()
 
-root    = args.outdir+str(args.tileid).zfill(6)
+root    = os.path.join(args.outdir, str(args.tileid).zfill(6))
 
 
 # AR dictionary with settings proper to each flavor
@@ -243,9 +256,9 @@ if (dotile==True):
 if (dosky==True):
 	tiles    = fits.open(root+'-tiles.fits')[1].data
 	d        = read_targets_in_tiles(skyindir,tiles=tiles)
-	dsupp    = read_targets_in_tiles(skyindir+'skies-supp/',tiles=tiles)
+	dsupp    = read_targets_in_tiles(os.path.join(skyindir,'skies-supp'),tiles=tiles)
 	n,tmpfn  = write_targets(args.outdir,np.concatenate([d,dsupp]),
-					indir=skyindir,indir2=skyindir+'skies-supp/',survey='cmx')
+					indir=skyindir,indir2=os.path.join(skyindir,'skies-supp'),survey='cmx')
 	#n,tmpfn  = write_targets(args.outdir,d,indir=skyindir,survey='cmx')
 	os.rename(tmpfn,root+'-sky.fits')
 	log.info('{:.1f}s\t{}-sky.fits written'.format(time()-start,root))
