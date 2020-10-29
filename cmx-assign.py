@@ -40,8 +40,6 @@ flavor : see DJS email Oct,15 2020:
 
 '''
 TBD : 
-- add tilera, tiledec as input
-- add supp_sky + change priorities (sky>bad_sky>supp_sky)
 '''
 
 # AR to speed up development/debugging
@@ -194,11 +192,32 @@ mtldatamodel = np.array([], dtype=[
     ])
 
 
+# AR extra-hdu for dithering
+extradatamodel = np.array([], dtype=[
+	('UNDITHER_RA','>f8'),('UNDITHER_DEC','>f8'),('TARGETID', '>i8')
+	])
+
+
 # AR obscon
 if   (args.obscon=='dark,bright'): obscon = 'DARK|GRAY|BRIGHT'
 elif (args.obscon=='dark'):        obscon = 'DARK|GRAY'
 else:                              obscon = 'BRIGHT' # AR bright
 log.info('{:.1f}s\tsetting obscon = {}'.format(time()-start,obscon))
+
+
+# AR get matching index for two np arrays, those should be arrays with unique values, like id
+# AR https://stackoverflow.com/questions/32653441/find-indices-of-common-values-in-two-arrays
+# AR we get: A[maskA] = B[maskB]
+def unq_searchsorted(A,B):
+	# AR sorting A,B
+	tmpA  = np.sort(A)
+	tmpB  = np.sort(B)
+	# AR create mask equivalent to np.in1d(A,B) and np.in1d(B,A) for unique elements
+	maskA = (np.searchsorted(tmpB,tmpA,'right') - np.searchsorted(tmpB,tmpA,'left'))==1
+	maskB = (np.searchsorted(tmpA,tmpB,'right') - np.searchsorted(tmpA,tmpB,'left'))==1
+	# AR to get back to original indexes
+	return np.argsort(A)[maskA],np.argsort(B)[maskB]
+
 
 
 # AR ! not using make_mtl !
@@ -361,19 +380,22 @@ if (dofa==True):
 				h[1].header[key] = str(fdict[key])
 			h.writeto(troot+'.fits',overwrite=True)
 		# AR running fiberassign
-		opts = [
+		if (args.flavor=='science'):
+			opts = ['--targets',   troot+'.fits',root+'-std.fits',]
+		else:
+			opts = ['--targets',   troot+'.fits',]
+		opts+= [
 				'--rundate',   args.rundate,
 				'--obsdate',   args.obsdate,
 				'--overwrite',
 				'--write_all_targets',
 				'--footprint', root+'-tiles.fits',
 				'--dir',       args.outdir,
-				'--targets',   troot+'.fits',root+'-std.fits',
 				'--sky',       root+'-sky.fits',
 				'--sky_per_petal', fdict['nskypet'],
 				'--gfafile',   root+'-gfa.fits',
 				]
-		log.info('{:.1f}s\t{}: running raw fiber assignment (fba_run)'.format(time()-start,troot))
+		log.info('{:.1f}s\t{}: running raw fiber assignment (fba_run) with opts={}'.format(time()-start,troot,' ; '.join(opts)))
 		ag = parse_assign(opts)
 		run_assign_full(ag)
 		# AR merging
@@ -388,6 +410,49 @@ if (dofa==True):
 		# AR renaming
 		os.rename(args.outdir+'fba-'        +str(args.tileid).zfill(6)+'.fits',troot+'-fba.fits')
 		os.rename(args.outdir+'fiberassign-'+str(args.tileid).zfill(6)+'.fits',troot+'-fiberassign.fits')
+		# AR adding an extra-hdu for the dithering
+		# AR ~copied from https://github.com/desihub/fiberassign/blob/52cb99424d8a1d4e5366e6a200636ab02cb71bb9/py/fiberassign/assign.py#L1141-L1208
+		if ((args.flavor in ['dithprec','dithlost']) & (name!='targ')):
+			tmpfn = troot+'-fiberassign-tmp.fits'
+			fdin  = fitsio.FITS(troot+'-fiberassign.fits', 'r')
+			if os.path.isfile(tmpfn):
+				os.remove(tmpfn)
+			fd    = fitsio.FITS(tmpfn, 'rw')
+			# AR copying troot+'-fiberassign.fits'
+			extnames = ['PRIMARY','FIBERASSIGN','SKY_MONITOR','GFA_TARGETS','TARGETS','POTENTIAL_ASSIGNMENTS']
+			for iext,extname in enumerate(extnames):
+				if (iext!=fdin[extname].get_extnum()):
+					log.error('{:.1f}s\t{}}-fiberassign.fits extensions not ordered as expected ({}); exiting'.format(time()-start),troot,','.join(extnames))
+					sys.exit()
+				if (extname=='PRIMARY'):
+					fd.write(None, header=fdin[extname].read_header(), extname=extname)
+				else:
+					fd.write(fdin[extname].read(), header=fdin[extname].read_header(), extname=extname)
+			# AR extra-hdu with UNDITHERED_RA, UNDITHERED_DEC
+			# AR reading *-fiberassign.fits, and updating TARGET_RA,TARGET_DEC
+			# AR with the undithered positions for TARGETID matched with root+'-targ.fits'
+			d                   = fits.open(troot+'-fiberassign.fits')[1].data
+			dundith             = fits.open(root+'-targ.fits')[1].data
+			ii,iiundith         = unq_searchsorted(d['TARGETID'],dundith['targetid'])
+			d['TARGET_RA'] [ii] = dundith['RA'] [iiundith]
+			d['TARGET_DEC'][ii] = dundith['DEC'][iiundith]
+			dextra  = Table()
+			for key in extradatamodel.dtype.names:
+				dextra[key] = np.empty(len(d), dtype=extradatamodel[key].dtype)
+			dextra['TARGETID']      = d['TARGETID']
+			dextra['UNDITHER_RA'] = d['TARGET_RA']
+			dextra['UNDITHER_DEC']= d['TARGET_DEC']
+			hdr0 = fdin[0].read_header()
+			hdr  = {}
+			for key in hdr0.keys():
+				if (key not in ['SIMPLE', 'BITPIX', 'NAXIS', 'EXTEND', 'COMMENT', 'EXTNAME']):
+					hdr[key] = hdr0[key]
+			hdr['UNDITHFN'] = root+'-targ.fits'
+			fd.write(dextra.as_array(), header=hdr, extname='EXTRA')
+			fd.close()
+			# AR renaming
+			os.rename(tmpfn,troot+'-fiberassign.fits')
+			log.info('{:.1f}s\t{}: additional EXTRA extension added'.format(time()-start,troot+'-fiberassign.fits'))
 		# AR identifiying assigned targets (=STD_DITHER) on the undithered tile
 		if ((args.flavor in ['dithprec','dithlost']) & (name=='targ')):
 			d     = fits.open(troot+'-fiberassign.fits')[1].data
@@ -414,19 +479,6 @@ if (dofa==True):
 
 
 if (doplot==True):
-	# AR get matching index for two np arrays, those should be arrays with unique values, like id
-	# AR https://stackoverflow.com/questions/32653441/find-indices-of-common-values-in-two-arrays
-	# AR we get: A[maskA] = B[maskB]
-	def unq_searchsorted(A,B):
-		# AR sorting A,B
-		tmpA  = np.sort(A)
-		tmpB  = np.sort(B)
-		# AR create mask equivalent to np.in1d(A,B) and np.in1d(B,A) for unique elements
-		maskA = (np.searchsorted(tmpB,tmpA,'right') - np.searchsorted(tmpB,tmpA,'left'))==1
-		maskB = (np.searchsorted(tmpA,tmpB,'right') - np.searchsorted(tmpA,tmpB,'left'))==1
-		# AR to get back to original indexes
-		return np.argsort(A)[maskA],np.argsort(B)[maskB]
-
 
 	# AR https://lmfit.github.io/lmfit-py/builtin_models.html#lmfit.models.GaussianModel
 	def gaussian(x, amp, cen, wid):
@@ -462,7 +514,7 @@ if (doplot==True):
 					'TARGET_RA','TARGET_DEC','GAIA_PHOT_G_MEAN_MAG']
 		# AR arrays following the parent ordering
 		d      = d[d['OBJTYPE']=='TGT']
-		iip,ii = unq_searchsorted(dp['targetid'],d['targetid'])
+		iip,ii = unq_searchsorted(dp['TARGETID'],d['TARGETID'])
 		for key in keys:
 			if (key=='CMX_TARGET'):
 				mydict[key] = np.zeros(len(dp),dtype=int)
