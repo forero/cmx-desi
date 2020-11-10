@@ -17,9 +17,9 @@ flavors = ['science', 'dithprec', 'dithlost']
 obscons = ['dark', 'bright']
 
 tileids = np.int_(data[:,0])
-for flavor in flavors:
-    for obscon in obscons:
-        for tileid in tileids:
+for tileid in tileids:
+    for flavor in flavors:
+        for obscon in obscons:
             run = print_run(obscon=obscon, flavor=flavor, intileid=tileid)
             print(run)
 
