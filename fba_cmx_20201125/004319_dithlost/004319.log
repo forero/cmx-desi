@@ -1,0 +1,768 @@
+INFO: 0.0s	start
+INFO: 0.0s	4319 in /global/common/software/desi/cori/desiconda/20200801-1.4.0-spec/code/desimodel/master/data/footprint/desi-tiles.fits -> setting args.tilera =52.0772828796861
+INFO: 0.0s	4319 in /global/common/software/desi/cori/desiconda/20200801-1.4.0-spec/code/desimodel/master/data/footprint/desi-tiles.fits -> setting args.tiledec=-0.9657726296240872
+INFO: 0.2s	directory for targ: /global/cfs/cdirs/desi/target/catalogs/dr9m/0.45.1/targets/cmx/resolve/no-obscon
+INFO: 0.2s	directory for sky: /global/cfs/cdirs/desi/target/catalogs/dr9m/0.45.1/skies
+INFO: 0.2s	directory for skysupp: /global/cfs/cdirs/desi/target/catalogs/gaiadr2/0.45.1/skies-supp
+INFO: 0.2s	directory for gfa: /global/cfs/cdirs/desi/target/catalogs/dr9m/0.45.1/gfas
+INFO: 0.2s	directory for svn tiles: /global/cfs/cdirs/desi/target/fiberassign/tiles/trunk
+INFO: 0.2s	will process 6 tiles with tileid=4319,4320,4321,4322,4323,4324
+INFO: 0.2s	args: doclean=n , dr=dr9m , dtver=0.45.1 , flavor=dithlost , intileid=4319 , outdir=./fba_cmx_20201125/004319_dithlost/ , rundate=2020-03-06T00:00:00 , seed=77 , tiledec=-0.9657726296240872 , tileid=4319 , tilera=52.0772828796861
+INFO: 0.2s	fdict: obscon=DARK|GRAY|BRIGHT , nskypet=40 , seed=77 , ndither=5 , gfrac=0.5 , gwidth=2.0 , bfrac=0.5 , bwidth=10.0 , msks=STD_DITHER
+INFO: 0.2s	./fba_cmx_20201125/004319_dithlost/004319-tiles.fits written
+INFO: 0.2s	./fba_cmx_20201125/004319_dithlost/004320-tiles.fits written
+INFO: 0.2s	./fba_cmx_20201125/004319_dithlost/004321-tiles.fits written
+INFO: 0.2s	./fba_cmx_20201125/004319_dithlost/004322-tiles.fits written
+INFO: 0.2s	./fba_cmx_20201125/004319_dithlost/004323-tiles.fits written
+INFO: 0.2s	./fba_cmx_20201125/004319_dithlost/004324-tiles.fits written
+WARNING:io.py:576:write_targets: qso_selection method not specified for output file
+INFO: 32.3s	./fba_cmx_20201125/004319_dithlost/004319-sky.fits written
+WARNING:io.py:576:write_targets: qso_selection method not specified for output file
+INFO: 83.1s	./fba_cmx_20201125/004319_dithlost/004319-gfa.fits written
+INFO: 150.0s	keeping 15045 STD_DITHER targets
+INFO: 150.0s	keeping 15045/119567 targets after having cut on STD_DITHER
+INFO: 150.0s	PRIORITY_INIT and NUMOBS_INIT tweaked for dithering
+INFO: 150.8s	mtl targets written to ./fba_cmx_20201125/004319_dithlost/dr9/0.45.1.dev4292/mtl/cmx/no-obscon/cmxmtl-no-obscon-hp-X.fits , moved to ./fba_cmx_20201125/004319_dithlost/004319-targ.fits
+INFO: 150.9s	tileid=004319: running raw fiber assignment (fba_run) with opts=--targets ; ./fba_cmx_20201125/004319_dithlost/004319-targ.fits ; --rundate ; 2020-03-06T00:00:00 ; --overwrite ; --write_all_targets ; --footprint ; ./fba_cmx_20201125/004319_dithlost/004319-tiles.fits ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --sky ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; --sky_per_petal ; 40 ; --gfafile ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits
+INFO: Loaded focalplane for time stamp 2020-03-06 00:00:00
+INFO: Focalplane has 0 fibers that are stuck / broken
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004319-targ.fits has 15045 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004319-targ.fits:  0.09 seconds (1 calls)
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits has 163438 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits:  0.29 seconds (1 calls)
+INFO: Building target tree:  0.04 seconds (1 calls)
+INFO: Computing targets available to all tile / locations:  0.29 seconds (1 calls)
+INFO: Computing tile / locations available to all objects:  0.04 seconds (1 calls)
+INFO: Assignment constructor project targets:  0.06 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.08 seconds (1 calls)
+INFO: redist:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Redistribute science targets:  0.01 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 10 standard targets per petal to unused locations:  0.01 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 sky targets per petal to unused locations:  0.05 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 suppsky targets per petal to unused locations:  0.01 seconds (1 calls)
+INFO: assign force standard:  working on tiles -1 (index 0) to -1 (index 0)
+WARNING: assign force standard: tile 4319, petal 2 could only assign 8 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4319, petal 3 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4319, petal 5 could only assign 5 (require 10).  Insufficient number of objects or too many collisions
+INFO: Force assignment of 10 standard targets per petal:  0.01 seconds (1 calls)
+INFO: assign force sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 sky targets per petal:  0.03 seconds (1 calls)
+INFO: assign force suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 suppsky targets per petal:  0.01 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.01 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign standard targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.09 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 5000 locations of positioner type "POS"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused sky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused suppsky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 20 locations of positioner type "ETC"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: Finding overlap of 25138 GFA targets on 1 tiles
+INFO: Generating GFA targets tables
+INFO:   Identifying GFA targets:  0.12 seconds (1 calls)
+INFO: Writing tile 4319
+INFO: Write output files:  0.49 seconds (1 calls)
+INFO: Global timer: Assign remaining unassigned fibers:  0.11 seconds (1 calls)
+INFO: Global timer: Assign sky monitor fibers:  0.00 seconds (1 calls)
+INFO: Global timer: Assign unused fibers to science targets:  0.08 seconds (1 calls)
+INFO: Global timer: Assign unused fibers to sky:  0.05 seconds (1 calls)
+INFO: Global timer: Assign unused fibers to standards:  0.01 seconds (1 calls)
+INFO: Global timer: Assign unused fibers to supp_sky:  0.01 seconds (1 calls)
+INFO: Global timer: Assignment ctor: project targets:  0.06 seconds (1 calls)
+INFO: Global timer: Assignment ctor: total:  0.06 seconds (1 calls)
+INFO: Global timer: Compute Locations Available:  0.04 seconds (1 calls)
+INFO: Global timer: Compute Targets Available:  0.29 seconds (1 calls)
+INFO: Global timer: Construct Assignment:  0.06 seconds (1 calls)
+INFO: Global timer: Construct target tree:  0.04 seconds (1 calls)
+INFO: Global timer: Force assignment of sufficient sky:  0.03 seconds (1 calls)
+INFO: Global timer: Force assignment of sufficient standards:  0.01 seconds (1 calls)
+INFO: Global timer: Force assignment of sufficient supp_sky:  0.01 seconds (1 calls)
+INFO: Global timer: Redistribute science targets:  0.01 seconds (1 calls)
+INFO: Global timer: force sky: local tile availability:  0.03 seconds (1 calls)
+INFO: Global timer: force sky: local tile compute science assignment:  0.00 seconds (1 calls)
+INFO: Global timer: force sky: total:  0.03 seconds (1 calls)
+INFO: Global timer: force standard: local tile availability:  0.01 seconds (1 calls)
+INFO: Global timer: force standard: local tile compute science assignment:  0.00 seconds (1 calls)
+INFO: Global timer: force standard: total:  0.01 seconds (1 calls)
+INFO: Global timer: force suppsky: local tile availability:  0.01 seconds (1 calls)
+INFO: Global timer: force suppsky: local tile compute science assignment:  0.00 seconds (1 calls)
+INFO: Global timer: force suppsky: total:  0.01 seconds (1 calls)
+INFO: Global timer: redistribute science: total:  0.01 seconds (1 calls)
+INFO: Global timer: run_assign_full calculation:  3.31 seconds (1 calls)
+INFO: Global timer: run_assign_full write output:  0.61 seconds (1 calls)
+INFO: Global timer: unused safe: local tile availability:  0.00 seconds (2 calls)
+INFO: Global timer: unused safe: total:  0.00 seconds (2 calls)
+INFO: Global timer: unused science: local tile availability:  0.02 seconds (2 calls)
+INFO: Global timer: unused science: total:  0.09 seconds (2 calls)
+INFO: Global timer: unused sky: local tile availability:  0.04 seconds (3 calls)
+INFO: Global timer: unused sky: total:  0.14 seconds (3 calls)
+INFO: Global timer: unused standard: local tile availability:  0.01 seconds (2 calls)
+INFO: Global timer: unused standard: total:  0.01 seconds (2 calls)
+INFO: Global timer: unused suppsky: local tile availability:  0.01 seconds (3 calls)
+INFO: Global timer: unused suppsky: total:  0.01 seconds (3 calls)
+INFO: 154.8s	tileid=004319: merging input target data (fba_merge_results) with opts=--skip_raw ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --targets ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits ; ./fba_cmx_20201125/004319_dithlost/004319-targ.fits
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-sky.fits into shared memory:  0.48 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits into shared memory:  0.08 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-targ.fits into shared memory:  0.13 seconds (1 calls)
+INFO: Reading raw tile data ./fba_cmx_20201125/004319_dithlost/fba-004319.fits
+INFO: Writing new data ./fba_cmx_20201125/004319_dithlost/fiberassign-004319.fits
+INFO: 159.0s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004319.fits to ./fba_cmx_20201125/004319_dithlost/fba-004319-tmp.fits
+INFO: 160.1s	./fba_cmx_20201125/004319_dithlost/004319: 2992 STD_DITHER assigned
+INFO: 195.3s	tileid=004320: running raw fiber assignment (fba_run) with opts=--targets ; ./fba_cmx_20201125/004319_dithlost/004320-targ.fits ; --rundate ; 2020-03-06T00:00:00 ; --overwrite ; --write_all_targets ; --footprint ; ./fba_cmx_20201125/004319_dithlost/004320-tiles.fits ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --sky ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; --sky_per_petal ; 40 ; --gfafile ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits
+INFO: Loaded focalplane for time stamp 2020-03-06 00:00:00
+INFO: Focalplane has 0 fibers that are stuck / broken
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004320-targ.fits has 2992 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004320-targ.fits:  0.03 seconds (1 calls)
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits has 163438 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits:  0.30 seconds (1 calls)
+INFO: Building target tree:  0.04 seconds (1 calls)
+INFO: Computing targets available to all tile / locations:  0.26 seconds (1 calls)
+INFO: Computing tile / locations available to all objects:  0.04 seconds (1 calls)
+INFO: Assignment constructor project targets:  0.06 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.07 seconds (1 calls)
+INFO: redist:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Redistribute science targets:  0.01 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 10 standard targets per petal to unused locations:  0.01 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 sky targets per petal to unused locations:  0.04 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 suppsky targets per petal to unused locations:  0.01 seconds (1 calls)
+INFO: assign force standard:  working on tiles -1 (index 0) to -1 (index 0)
+WARNING: assign force standard: tile 4320, petal 1 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4320, petal 2 could only assign 7 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4320, petal 3 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4320, petal 5 could only assign 4 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4320, petal 6 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4320, petal 7 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4320, petal 8 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+INFO: Force assignment of 10 standard targets per petal:  0.01 seconds (1 calls)
+INFO: assign force sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 sky targets per petal:  0.03 seconds (1 calls)
+INFO: assign force suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 suppsky targets per petal:  0.01 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign standard targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.08 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 5000 locations of positioner type "POS"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused sky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused suppsky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 20 locations of positioner type "ETC"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: Finding overlap of 25138 GFA targets on 1 tiles
+INFO: Generating GFA targets tables
+INFO:   Identifying GFA targets:  0.12 seconds (1 calls)
+INFO: Writing tile 4320
+INFO: Write output files:  0.46 seconds (1 calls)
+INFO: Global timer: Assign remaining unassigned fibers:  0.20 seconds (2 calls)
+INFO: Global timer: Assign sky monitor fibers:  0.00 seconds (2 calls)
+INFO: Global timer: Assign unused fibers to science targets:  0.15 seconds (2 calls)
+INFO: Global timer: Assign unused fibers to sky:  0.10 seconds (2 calls)
+INFO: Global timer: Assign unused fibers to standards:  0.01 seconds (2 calls)
+INFO: Global timer: Assign unused fibers to supp_sky:  0.01 seconds (2 calls)
+INFO: Global timer: Assignment ctor: project targets:  0.11 seconds (2 calls)
+INFO: Global timer: Assignment ctor: total:  0.11 seconds (2 calls)
+INFO: Global timer: Compute Locations Available:  0.09 seconds (2 calls)
+INFO: Global timer: Compute Targets Available:  0.55 seconds (2 calls)
+INFO: Global timer: Construct Assignment:  0.11 seconds (2 calls)
+INFO: Global timer: Construct target tree:  0.08 seconds (2 calls)
+INFO: Global timer: Force assignment of sufficient sky:  0.06 seconds (2 calls)
+INFO: Global timer: Force assignment of sufficient standards:  0.02 seconds (2 calls)
+INFO: Global timer: Force assignment of sufficient supp_sky:  0.02 seconds (2 calls)
+INFO: Global timer: Redistribute science targets:  0.01 seconds (2 calls)
+INFO: Global timer: force sky: local tile availability:  0.05 seconds (2 calls)
+INFO: Global timer: force sky: local tile compute science assignment:  0.00 seconds (2 calls)
+INFO: Global timer: force sky: total:  0.06 seconds (2 calls)
+INFO: Global timer: force standard: local tile availability:  0.01 seconds (2 calls)
+INFO: Global timer: force standard: local tile compute science assignment:  0.00 seconds (2 calls)
+INFO: Global timer: force standard: total:  0.02 seconds (2 calls)
+INFO: Global timer: force suppsky: local tile availability:  0.01 seconds (2 calls)
+INFO: Global timer: force suppsky: local tile compute science assignment:  0.00 seconds (2 calls)
+INFO: Global timer: force suppsky: total:  0.02 seconds (2 calls)
+INFO: Global timer: redistribute science: total:  0.01 seconds (2 calls)
+INFO: Global timer: run_assign_full calculation:  5.92 seconds (2 calls)
+INFO: Global timer: run_assign_full write output:  1.19 seconds (2 calls)
+INFO: Global timer: unused safe: local tile availability:  0.00 seconds (4 calls)
+INFO: Global timer: unused safe: total:  0.00 seconds (4 calls)
+INFO: Global timer: unused science: local tile availability:  0.04 seconds (4 calls)
+INFO: Global timer: unused science: total:  0.16 seconds (4 calls)
+INFO: Global timer: unused sky: local tile availability:  0.07 seconds (6 calls)
+INFO: Global timer: unused sky: total:  0.27 seconds (6 calls)
+INFO: Global timer: unused standard: local tile availability:  0.02 seconds (4 calls)
+INFO: Global timer: unused standard: total:  0.02 seconds (4 calls)
+INFO: Global timer: unused suppsky: local tile availability:  0.01 seconds (6 calls)
+INFO: Global timer: unused suppsky: total:  0.01 seconds (6 calls)
+INFO: 198.6s	tileid=004320: merging input target data (fba_merge_results) with opts=--skip_raw ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --targets ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits ; ./fba_cmx_20201125/004319_dithlost/004320-targ.fits
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-sky.fits into shared memory:  0.43 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits into shared memory:  0.08 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004320-targ.fits into shared memory:  0.03 seconds (1 calls)
+INFO: Reading raw tile data ./fba_cmx_20201125/004319_dithlost/fba-004320.fits
+INFO: Writing new data ./fba_cmx_20201125/004319_dithlost/fiberassign-004320.fits
+INFO: 202.2s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004320.fits to ./fba_cmx_20201125/004319_dithlost/fba-004320-tmp.fits
+INFO: 204.8s	./fba_cmx_20201125/004319_dithlost/fiberassign-004320.fits: additional EXTRA extension added
+INFO: 236.3s	tileid=004321: running raw fiber assignment (fba_run) with opts=--targets ; ./fba_cmx_20201125/004319_dithlost/004321-targ.fits ; --rundate ; 2020-03-06T00:00:00 ; --overwrite ; --write_all_targets ; --footprint ; ./fba_cmx_20201125/004319_dithlost/004321-tiles.fits ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --sky ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; --sky_per_petal ; 40 ; --gfafile ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits
+INFO: Loaded focalplane for time stamp 2020-03-06 00:00:00
+INFO: Focalplane has 0 fibers that are stuck / broken
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004321-targ.fits has 2992 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004321-targ.fits:  0.03 seconds (1 calls)
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits has 163438 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits:  0.32 seconds (1 calls)
+INFO: Building target tree:  0.04 seconds (1 calls)
+INFO: Computing targets available to all tile / locations:  0.30 seconds (1 calls)
+INFO: Computing tile / locations available to all objects:  0.04 seconds (1 calls)
+INFO: Assignment constructor project targets:  0.06 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.08 seconds (1 calls)
+INFO: redist:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Redistribute science targets:  0.01 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 10 standard targets per petal to unused locations:  0.01 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 sky targets per petal to unused locations:  0.05 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 suppsky targets per petal to unused locations:  0.01 seconds (1 calls)
+INFO: assign force standard:  working on tiles -1 (index 0) to -1 (index 0)
+WARNING: assign force standard: tile 4321, petal 2 could only assign 8 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4321, petal 3 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4321, petal 5 could only assign 4 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4321, petal 6 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4321, petal 8 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+INFO: Force assignment of 10 standard targets per petal:  0.01 seconds (1 calls)
+INFO: assign force sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 sky targets per petal:  0.03 seconds (1 calls)
+INFO: assign force suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 suppsky targets per petal:  0.01 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.01 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign standard targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.10 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 5000 locations of positioner type "POS"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused sky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused suppsky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 20 locations of positioner type "ETC"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: Finding overlap of 25138 GFA targets on 1 tiles
+INFO: Generating GFA targets tables
+INFO:   Identifying GFA targets:  0.12 seconds (1 calls)
+INFO: Writing tile 4321
+INFO: Write output files:  0.64 seconds (1 calls)
+INFO: Global timer: Assign remaining unassigned fibers:  0.32 seconds (3 calls)
+INFO: Global timer: Assign sky monitor fibers:  0.01 seconds (3 calls)
+INFO: Global timer: Assign unused fibers to science targets:  0.23 seconds (3 calls)
+INFO: Global timer: Assign unused fibers to sky:  0.15 seconds (3 calls)
+INFO: Global timer: Assign unused fibers to standards:  0.02 seconds (3 calls)
+INFO: Global timer: Assign unused fibers to supp_sky:  0.02 seconds (3 calls)
+INFO: Global timer: Assignment ctor: project targets:  0.17 seconds (3 calls)
+INFO: Global timer: Assignment ctor: total:  0.17 seconds (3 calls)
+INFO: Global timer: Compute Locations Available:  0.13 seconds (3 calls)
+INFO: Global timer: Compute Targets Available:  0.85 seconds (3 calls)
+INFO: Global timer: Construct Assignment:  0.17 seconds (3 calls)
+INFO: Global timer: Construct target tree:  0.12 seconds (3 calls)
+INFO: Global timer: Force assignment of sufficient sky:  0.10 seconds (3 calls)
+INFO: Global timer: Force assignment of sufficient standards:  0.03 seconds (3 calls)
+INFO: Global timer: Force assignment of sufficient supp_sky:  0.04 seconds (3 calls)
+INFO: Global timer: Redistribute science targets:  0.02 seconds (3 calls)
+INFO: Global timer: force sky: local tile availability:  0.08 seconds (3 calls)
+INFO: Global timer: force sky: local tile compute science assignment:  0.00 seconds (3 calls)
+INFO: Global timer: force sky: total:  0.09 seconds (3 calls)
+INFO: Global timer: force standard: local tile availability:  0.02 seconds (3 calls)
+INFO: Global timer: force standard: local tile compute science assignment:  0.01 seconds (3 calls)
+INFO: Global timer: force standard: total:  0.03 seconds (3 calls)
+INFO: Global timer: force suppsky: local tile availability:  0.02 seconds (3 calls)
+INFO: Global timer: force suppsky: local tile compute science assignment:  0.01 seconds (3 calls)
+INFO: Global timer: force suppsky: total:  0.04 seconds (3 calls)
+INFO: Global timer: redistribute science: total:  0.02 seconds (3 calls)
+INFO: Global timer: run_assign_full calculation:  8.86 seconds (3 calls)
+INFO: Global timer: run_assign_full write output:  1.96 seconds (3 calls)
+INFO: Global timer: unused safe: local tile availability:  0.00 seconds (6 calls)
+INFO: Global timer: unused safe: total:  0.00 seconds (6 calls)
+INFO: Global timer: unused science: local tile availability:  0.06 seconds (6 calls)
+INFO: Global timer: unused science: total:  0.24 seconds (6 calls)
+INFO: Global timer: unused sky: local tile availability:  0.10 seconds (9 calls)
+INFO: Global timer: unused sky: total:  0.42 seconds (9 calls)
+INFO: Global timer: unused standard: local tile availability:  0.03 seconds (6 calls)
+INFO: Global timer: unused standard: total:  0.03 seconds (6 calls)
+INFO: Global timer: unused suppsky: local tile availability:  0.02 seconds (9 calls)
+INFO: Global timer: unused suppsky: total:  0.02 seconds (9 calls)
+INFO: 240.1s	tileid=004321: merging input target data (fba_merge_results) with opts=--skip_raw ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --targets ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits ; ./fba_cmx_20201125/004319_dithlost/004321-targ.fits
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-sky.fits into shared memory:  0.51 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits into shared memory:  0.08 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004321-targ.fits into shared memory:  0.03 seconds (1 calls)
+INFO: Reading raw tile data ./fba_cmx_20201125/004319_dithlost/fba-004321.fits
+INFO: Writing new data ./fba_cmx_20201125/004319_dithlost/fiberassign-004321.fits
+INFO: 244.1s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004321.fits to ./fba_cmx_20201125/004319_dithlost/fba-004321-tmp.fits
+INFO: 247.3s	./fba_cmx_20201125/004319_dithlost/fiberassign-004321.fits: additional EXTRA extension added
+INFO: 282.4s	tileid=004322: running raw fiber assignment (fba_run) with opts=--targets ; ./fba_cmx_20201125/004319_dithlost/004322-targ.fits ; --rundate ; 2020-03-06T00:00:00 ; --overwrite ; --write_all_targets ; --footprint ; ./fba_cmx_20201125/004319_dithlost/004322-tiles.fits ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --sky ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; --sky_per_petal ; 40 ; --gfafile ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits
+INFO: Loaded focalplane for time stamp 2020-03-06 00:00:00
+INFO: Focalplane has 0 fibers that are stuck / broken
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004322-targ.fits has 2992 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004322-targ.fits:  0.03 seconds (1 calls)
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits has 163438 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits:  0.27 seconds (1 calls)
+INFO: Building target tree:  0.04 seconds (1 calls)
+INFO: Computing targets available to all tile / locations:  0.30 seconds (1 calls)
+INFO: Computing tile / locations available to all objects:  0.04 seconds (1 calls)
+INFO: Assignment constructor project targets:  0.06 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.08 seconds (1 calls)
+INFO: redist:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Redistribute science targets:  0.01 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 10 standard targets per petal to unused locations:  0.01 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 sky targets per petal to unused locations:  0.05 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 suppsky targets per petal to unused locations:  0.00 seconds (1 calls)
+INFO: assign force standard:  working on tiles -1 (index 0) to -1 (index 0)
+WARNING: assign force standard: tile 4322, petal 0 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4322, petal 2 could only assign 8 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4322, petal 3 could only assign 8 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4322, petal 5 could only assign 4 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4322, petal 6 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4322, petal 7 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+INFO: Force assignment of 10 standard targets per petal:  0.01 seconds (1 calls)
+INFO: assign force sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 sky targets per petal:  0.02 seconds (1 calls)
+INFO: assign force suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 suppsky targets per petal:  0.01 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign standard targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.09 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 5000 locations of positioner type "POS"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused sky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused suppsky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 20 locations of positioner type "ETC"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: Finding overlap of 25138 GFA targets on 1 tiles
+INFO: Generating GFA targets tables
+INFO:   Identifying GFA targets:  0.11 seconds (1 calls)
+INFO: Writing tile 4322
+INFO: Write output files:  0.86 seconds (1 calls)
+INFO: Global timer: Assign remaining unassigned fibers:  0.42 seconds (4 calls)
+INFO: Global timer: Assign sky monitor fibers:  0.01 seconds (4 calls)
+INFO: Global timer: Assign unused fibers to science targets:  0.32 seconds (4 calls)
+INFO: Global timer: Assign unused fibers to sky:  0.20 seconds (4 calls)
+INFO: Global timer: Assign unused fibers to standards:  0.03 seconds (4 calls)
+INFO: Global timer: Assign unused fibers to supp_sky:  0.02 seconds (4 calls)
+INFO: Global timer: Assignment ctor: project targets:  0.23 seconds (4 calls)
+INFO: Global timer: Assignment ctor: total:  0.23 seconds (4 calls)
+INFO: Global timer: Compute Locations Available:  0.17 seconds (4 calls)
+INFO: Global timer: Compute Targets Available:  1.16 seconds (4 calls)
+INFO: Global timer: Construct Assignment:  0.23 seconds (4 calls)
+INFO: Global timer: Construct target tree:  0.15 seconds (4 calls)
+INFO: Global timer: Force assignment of sufficient sky:  0.12 seconds (4 calls)
+INFO: Global timer: Force assignment of sufficient standards:  0.04 seconds (4 calls)
+INFO: Global timer: Force assignment of sufficient supp_sky:  0.04 seconds (4 calls)
+INFO: Global timer: Redistribute science targets:  0.02 seconds (4 calls)
+INFO: Global timer: force sky: local tile availability:  0.10 seconds (4 calls)
+INFO: Global timer: force sky: local tile compute science assignment:  0.01 seconds (4 calls)
+INFO: Global timer: force sky: total:  0.11 seconds (4 calls)
+INFO: Global timer: force standard: local tile availability:  0.03 seconds (4 calls)
+INFO: Global timer: force standard: local tile compute science assignment:  0.01 seconds (4 calls)
+INFO: Global timer: force standard: total:  0.04 seconds (4 calls)
+INFO: Global timer: force suppsky: local tile availability:  0.03 seconds (4 calls)
+INFO: Global timer: force suppsky: local tile compute science assignment:  0.01 seconds (4 calls)
+INFO: Global timer: force suppsky: total:  0.04 seconds (4 calls)
+INFO: Global timer: redistribute science: total:  0.02 seconds (4 calls)
+INFO: Global timer: run_assign_full calculation:  11.47 seconds (4 calls)
+INFO: Global timer: run_assign_full write output:  2.93 seconds (4 calls)
+INFO: Global timer: unused safe: local tile availability:  0.00 seconds (8 calls)
+INFO: Global timer: unused safe: total:  0.00 seconds (8 calls)
+INFO: Global timer: unused science: local tile availability:  0.08 seconds (8 calls)
+INFO: Global timer: unused science: total:  0.32 seconds (8 calls)
+INFO: Global timer: unused sky: local tile availability:  0.14 seconds (12 calls)
+INFO: Global timer: unused sky: total:  0.56 seconds (12 calls)
+INFO: Global timer: unused standard: local tile availability:  0.04 seconds (8 calls)
+INFO: Global timer: unused standard: total:  0.04 seconds (8 calls)
+INFO: Global timer: unused suppsky: local tile availability:  0.02 seconds (12 calls)
+INFO: Global timer: unused suppsky: total:  0.02 seconds (12 calls)
+INFO: 286.0s	tileid=004322: merging input target data (fba_merge_results) with opts=--skip_raw ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --targets ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits ; ./fba_cmx_20201125/004319_dithlost/004322-targ.fits
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-sky.fits into shared memory:  0.43 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits into shared memory:  0.07 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004322-targ.fits into shared memory:  0.03 seconds (1 calls)
+INFO: Reading raw tile data ./fba_cmx_20201125/004319_dithlost/fba-004322.fits
+INFO: Writing new data ./fba_cmx_20201125/004319_dithlost/fiberassign-004322.fits
+INFO: 289.5s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004322.fits to ./fba_cmx_20201125/004319_dithlost/fba-004322-tmp.fits
+INFO: 292.5s	./fba_cmx_20201125/004319_dithlost/fiberassign-004322.fits: additional EXTRA extension added
+INFO: 323.3s	tileid=004323: running raw fiber assignment (fba_run) with opts=--targets ; ./fba_cmx_20201125/004319_dithlost/004323-targ.fits ; --rundate ; 2020-03-06T00:00:00 ; --overwrite ; --write_all_targets ; --footprint ; ./fba_cmx_20201125/004319_dithlost/004323-tiles.fits ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --sky ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; --sky_per_petal ; 40 ; --gfafile ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits
+INFO: Loaded focalplane for time stamp 2020-03-06 00:00:00
+INFO: Focalplane has 0 fibers that are stuck / broken
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004323-targ.fits has 2992 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004323-targ.fits:  0.03 seconds (1 calls)
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits has 163438 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits:  0.39 seconds (1 calls)
+INFO: Building target tree:  0.04 seconds (1 calls)
+INFO: Computing targets available to all tile / locations:  0.34 seconds (1 calls)
+INFO: Computing tile / locations available to all objects:  0.05 seconds (1 calls)
+INFO: Assignment constructor project targets:  0.06 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.08 seconds (1 calls)
+INFO: redist:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Redistribute science targets:  0.01 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 10 standard targets per petal to unused locations:  0.01 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 sky targets per petal to unused locations:  0.05 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 suppsky targets per petal to unused locations:  0.01 seconds (1 calls)
+INFO: assign force standard:  working on tiles -1 (index 0) to -1 (index 0)
+WARNING: assign force standard: tile 4323, petal 2 could only assign 7 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4323, petal 3 could only assign 8 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4323, petal 5 could only assign 5 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4323, petal 6 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4323, petal 8 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+INFO: Force assignment of 10 standard targets per petal:  0.01 seconds (1 calls)
+INFO: assign force sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 sky targets per petal:  0.03 seconds (1 calls)
+INFO: assign force suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 suppsky targets per petal:  0.01 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign standard targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.10 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 5000 locations of positioner type "POS"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused sky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused suppsky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 20 locations of positioner type "ETC"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: Finding overlap of 25138 GFA targets on 1 tiles
+INFO: Generating GFA targets tables
+INFO:   Identifying GFA targets:  0.12 seconds (1 calls)
+INFO: Writing tile 4323
+INFO: Write output files:  1.35 seconds (1 calls)
+INFO: Global timer: Assign remaining unassigned fibers:  0.53 seconds (5 calls)
+INFO: Global timer: Assign sky monitor fibers:  0.01 seconds (5 calls)
+INFO: Global timer: Assign unused fibers to science targets:  0.39 seconds (5 calls)
+INFO: Global timer: Assign unused fibers to sky:  0.25 seconds (5 calls)
+INFO: Global timer: Assign unused fibers to standards:  0.03 seconds (5 calls)
+INFO: Global timer: Assign unused fibers to supp_sky:  0.03 seconds (5 calls)
+INFO: Global timer: Assignment ctor: project targets:  0.29 seconds (5 calls)
+INFO: Global timer: Assignment ctor: total:  0.29 seconds (5 calls)
+INFO: Global timer: Compute Locations Available:  0.22 seconds (5 calls)
+INFO: Global timer: Compute Targets Available:  1.50 seconds (5 calls)
+INFO: Global timer: Construct Assignment:  0.29 seconds (5 calls)
+INFO: Global timer: Construct target tree:  0.20 seconds (5 calls)
+INFO: Global timer: Force assignment of sufficient sky:  0.15 seconds (5 calls)
+INFO: Global timer: Force assignment of sufficient standards:  0.05 seconds (5 calls)
+INFO: Global timer: Force assignment of sufficient supp_sky:  0.05 seconds (5 calls)
+INFO: Global timer: Redistribute science targets:  0.03 seconds (5 calls)
+INFO: Global timer: force sky: local tile availability:  0.12 seconds (5 calls)
+INFO: Global timer: force sky: local tile compute science assignment:  0.01 seconds (5 calls)
+INFO: Global timer: force sky: total:  0.14 seconds (5 calls)
+INFO: Global timer: force standard: local tile availability:  0.03 seconds (5 calls)
+INFO: Global timer: force standard: local tile compute science assignment:  0.01 seconds (5 calls)
+INFO: Global timer: force standard: total:  0.05 seconds (5 calls)
+INFO: Global timer: force suppsky: local tile availability:  0.03 seconds (5 calls)
+INFO: Global timer: force suppsky: local tile compute science assignment:  0.01 seconds (5 calls)
+INFO: Global timer: force suppsky: total:  0.05 seconds (5 calls)
+INFO: Global timer: redistribute science: total:  0.03 seconds (5 calls)
+INFO: Global timer: run_assign_full calculation:  14.42 seconds (5 calls)
+INFO: Global timer: run_assign_full write output:  4.41 seconds (5 calls)
+INFO: Global timer: unused safe: local tile availability:  0.00 seconds (10 calls)
+INFO: Global timer: unused safe: total:  0.00 seconds (10 calls)
+INFO: Global timer: unused science: local tile availability:  0.09 seconds (10 calls)
+INFO: Global timer: unused science: total:  0.40 seconds (10 calls)
+INFO: Global timer: unused sky: local tile availability:  0.17 seconds (15 calls)
+INFO: Global timer: unused sky: total:  0.71 seconds (15 calls)
+INFO: Global timer: unused standard: local tile availability:  0.05 seconds (10 calls)
+INFO: Global timer: unused standard: total:  0.05 seconds (10 calls)
+INFO: Global timer: unused suppsky: local tile availability:  0.03 seconds (15 calls)
+INFO: Global timer: unused suppsky: total:  0.03 seconds (15 calls)
+INFO: 327.7s	tileid=004323: merging input target data (fba_merge_results) with opts=--skip_raw ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --targets ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits ; ./fba_cmx_20201125/004319_dithlost/004323-targ.fits
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-sky.fits into shared memory:  0.49 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits into shared memory:  0.08 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004323-targ.fits into shared memory:  0.03 seconds (1 calls)
+INFO: Reading raw tile data ./fba_cmx_20201125/004319_dithlost/fba-004323.fits
+INFO: Writing new data ./fba_cmx_20201125/004319_dithlost/fiberassign-004323.fits
+INFO: 331.5s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004323.fits to ./fba_cmx_20201125/004319_dithlost/fba-004323-tmp.fits
+INFO: 334.5s	./fba_cmx_20201125/004319_dithlost/fiberassign-004323.fits: additional EXTRA extension added
+INFO: 369.4s	tileid=004324: running raw fiber assignment (fba_run) with opts=--targets ; ./fba_cmx_20201125/004319_dithlost/004324-targ.fits ; --rundate ; 2020-03-06T00:00:00 ; --overwrite ; --write_all_targets ; --footprint ; ./fba_cmx_20201125/004319_dithlost/004324-tiles.fits ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --sky ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; --sky_per_petal ; 40 ; --gfafile ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits
+INFO: Loaded focalplane for time stamp 2020-03-06 00:00:00
+INFO: Focalplane has 0 fibers that are stuck / broken
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004324-targ.fits has 2992 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004324-targ.fits:  0.03 seconds (1 calls)
+INFO: Target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits has 163438 rows.  Reading in chunks of 1000000
+INFO: Read target file ./fba_cmx_20201125/004319_dithlost/004319-sky.fits:  0.29 seconds (1 calls)
+INFO: Building target tree:  0.04 seconds (1 calls)
+INFO: Computing targets available to all tile / locations:  0.30 seconds (1 calls)
+INFO: Computing tile / locations available to all objects:  0.04 seconds (1 calls)
+INFO: Assignment constructor project targets:  0.06 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.08 seconds (1 calls)
+INFO: redist:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Redistribute science targets:  0.01 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 10 standard targets per petal to unused locations:  0.01 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 sky targets per petal to unused locations:  0.05 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign up to 40 suppsky targets per petal to unused locations:  0.01 seconds (1 calls)
+INFO: assign force standard:  working on tiles -1 (index 0) to -1 (index 0)
+WARNING: assign force standard: tile 4324, petal 2 could only assign 7 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4324, petal 3 could only assign 9 (require 10).  Insufficient number of objects or too many collisions
+WARNING: assign force standard: tile 4324, petal 5 could only assign 5 (require 10).  Insufficient number of objects or too many collisions
+INFO: Force assignment of 10 standard targets per petal:  0.01 seconds (1 calls)
+INFO: assign force sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 sky targets per petal:  0.03 seconds (1 calls)
+INFO: assign force suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Force assignment of 40 suppsky targets per petal:  0.01 seconds (1 calls)
+INFO: assign unused science:  considering 5000 locations of positioner type "POS"
+INFO: assign unused science:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign science targets to unused locations:  0.01 seconds (1 calls)
+INFO: assign unused standard:  considering 5000 locations of positioner type "POS"
+INFO: assign unused standard:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign standard targets to unused locations:  0.01 seconds (1 calls)
+INFO: assign unused sky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.10 seconds (1 calls)
+INFO: assign unused suppsky:  considering 5000 locations of positioner type "POS"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 5000 locations of positioner type "POS"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused sky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused sky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign sky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused suppsky:  considering 20 locations of positioner type "ETC"
+INFO: assign unused suppsky:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign suppsky targets to unused locations:  0.00 seconds (1 calls)
+INFO: assign unused safe:  considering 20 locations of positioner type "ETC"
+INFO: assign unused safe:  working on tiles -1 (index 0) to -1 (index 0)
+INFO: Assign safe targets to unused locations:  0.00 seconds (1 calls)
+INFO: Finding overlap of 25138 GFA targets on 1 tiles
+INFO: Generating GFA targets tables
+INFO:   Identifying GFA targets:  0.11 seconds (1 calls)
+INFO: Writing tile 4324
+INFO: Write output files:  0.40 seconds (1 calls)
+INFO: Global timer: Assign remaining unassigned fibers:  0.65 seconds (6 calls)
+INFO: Global timer: Assign sky monitor fibers:  0.01 seconds (6 calls)
+INFO: Global timer: Assign unused fibers to science targets:  0.47 seconds (6 calls)
+INFO: Global timer: Assign unused fibers to sky:  0.31 seconds (6 calls)
+INFO: Global timer: Assign unused fibers to standards:  0.04 seconds (6 calls)
+INFO: Global timer: Assign unused fibers to supp_sky:  0.03 seconds (6 calls)
+INFO: Global timer: Assignment ctor: project targets:  0.35 seconds (6 calls)
+INFO: Global timer: Assignment ctor: total:  0.35 seconds (6 calls)
+INFO: Global timer: Compute Locations Available:  0.26 seconds (6 calls)
+INFO: Global timer: Compute Targets Available:  1.79 seconds (6 calls)
+INFO: Global timer: Construct Assignment:  0.35 seconds (6 calls)
+INFO: Global timer: Construct target tree:  0.24 seconds (6 calls)
+INFO: Global timer: Force assignment of sufficient sky:  0.19 seconds (6 calls)
+INFO: Global timer: Force assignment of sufficient standards:  0.06 seconds (6 calls)
+INFO: Global timer: Force assignment of sufficient supp_sky:  0.07 seconds (6 calls)
+INFO: Global timer: Redistribute science targets:  0.04 seconds (6 calls)
+INFO: Global timer: force sky: local tile availability:  0.15 seconds (6 calls)
+INFO: Global timer: force sky: local tile compute science assignment:  0.01 seconds (6 calls)
+INFO: Global timer: force sky: total:  0.17 seconds (6 calls)
+INFO: Global timer: force standard: local tile availability:  0.04 seconds (6 calls)
+INFO: Global timer: force standard: local tile compute science assignment:  0.01 seconds (6 calls)
+INFO: Global timer: force standard: total:  0.06 seconds (6 calls)
+INFO: Global timer: force suppsky: local tile availability:  0.04 seconds (6 calls)
+INFO: Global timer: force suppsky: local tile compute science assignment:  0.01 seconds (6 calls)
+INFO: Global timer: force suppsky: total:  0.07 seconds (6 calls)
+INFO: Global timer: redistribute science: total:  0.04 seconds (6 calls)
+INFO: Global timer: run_assign_full calculation:  16.93 seconds (6 calls)
+INFO: Global timer: run_assign_full write output:  4.92 seconds (6 calls)
+INFO: Global timer: unused safe: local tile availability:  0.00 seconds (12 calls)
+INFO: Global timer: unused safe: total:  0.00 seconds (12 calls)
+INFO: Global timer: unused science: local tile availability:  0.11 seconds (12 calls)
+INFO: Global timer: unused science: total:  0.48 seconds (12 calls)
+INFO: Global timer: unused sky: local tile availability:  0.22 seconds (18 calls)
+INFO: Global timer: unused sky: total:  0.86 seconds (18 calls)
+INFO: Global timer: unused standard: local tile availability:  0.06 seconds (12 calls)
+INFO: Global timer: unused standard: total:  0.06 seconds (12 calls)
+INFO: Global timer: unused suppsky: local tile availability:  0.03 seconds (18 calls)
+INFO: Global timer: unused suppsky: total:  0.03 seconds (18 calls)
+INFO: 372.4s	tileid=004324: merging input target data (fba_merge_results) with opts=--skip_raw ; --dir ; ./fba_cmx_20201125/004319_dithlost/ ; --targets ; ./fba_cmx_20201125/004319_dithlost/004319-sky.fits ; ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits ; ./fba_cmx_20201125/004319_dithlost/004324-targ.fits
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-sky.fits into shared memory:  0.45 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004319-gfa.fits into shared memory:  0.07 seconds (1 calls)
+INFO: Read ./fba_cmx_20201125/004319_dithlost/004324-targ.fits into shared memory:  0.03 seconds (1 calls)
+INFO: Reading raw tile data ./fba_cmx_20201125/004319_dithlost/fba-004324.fits
+INFO: Writing new data ./fba_cmx_20201125/004319_dithlost/fiberassign-004324.fits
+INFO: 376.1s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004324.fits to ./fba_cmx_20201125/004319_dithlost/fba-004324-tmp.fits
+INFO: 378.7s	./fba_cmx_20201125/004319_dithlost/fiberassign-004324.fits: additional EXTRA extension added
+INFO: 378.7s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004319-tmp.fits to ./fba_cmx_20201125/004319_dithlost/fba-004319.fits
+INFO: 378.7s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004320-tmp.fits to ./fba_cmx_20201125/004319_dithlost/fba-004320.fits
+INFO: 378.7s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004321-tmp.fits to ./fba_cmx_20201125/004319_dithlost/fba-004321.fits
+INFO: 378.7s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004322-tmp.fits to ./fba_cmx_20201125/004319_dithlost/fba-004322.fits
+INFO: 378.7s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004323-tmp.fits to ./fba_cmx_20201125/004319_dithlost/fba-004323.fits
+INFO: 378.7s	renaming ./fba_cmx_20201125/004319_dithlost/fba-004324-tmp.fits to ./fba_cmx_20201125/004319_dithlost/fba-004324.fits
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:927: RuntimeWarning: divide by zero encountered in true_divide
+  rzp = -2.5 * np.log10(dp["FLUX_R"] / dp["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:929: RuntimeWarning: divide by zero encountered in true_divide
+  rz = -2.5 * np.log10(mydict["FLUX_R"] / mydict["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:983: RuntimeWarning: invalid value encountered in true_divide
+  (hb.get_array() / hbp.get_array()) / len(tileids),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:1002: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+  ax = plt.subplot(gs[1, ip])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:927: RuntimeWarning: divide by zero encountered in true_divide
+  rzp = -2.5 * np.log10(dp["FLUX_R"] / dp["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:929: RuntimeWarning: divide by zero encountered in true_divide
+  rz = -2.5 * np.log10(mydict["FLUX_R"] / mydict["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:983: RuntimeWarning: invalid value encountered in true_divide
+  (hb.get_array() / hbp.get_array()) / len(tileids),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:1002: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+  ax = plt.subplot(gs[1, ip])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:927: RuntimeWarning: divide by zero encountered in true_divide
+  rzp = -2.5 * np.log10(dp["FLUX_R"] / dp["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:929: RuntimeWarning: divide by zero encountered in true_divide
+  rz = -2.5 * np.log10(mydict["FLUX_R"] / mydict["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:983: RuntimeWarning: invalid value encountered in true_divide
+  (hb.get_array() / hbp.get_array()) / len(tileids),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:1002: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+  ax = plt.subplot(gs[1, ip])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:927: RuntimeWarning: divide by zero encountered in true_divide
+  rzp = -2.5 * np.log10(dp["FLUX_R"] / dp["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:929: RuntimeWarning: divide by zero encountered in true_divide
+  rz = -2.5 * np.log10(mydict["FLUX_R"] / mydict["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:983: RuntimeWarning: invalid value encountered in true_divide
+  (hb.get_array() / hbp.get_array()) / len(tileids),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:1002: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+  ax = plt.subplot(gs[1, ip])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:927: RuntimeWarning: divide by zero encountered in true_divide
+  rzp = -2.5 * np.log10(dp["FLUX_R"] / dp["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:929: RuntimeWarning: divide by zero encountered in true_divide
+  rz = -2.5 * np.log10(mydict["FLUX_R"] / mydict["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:983: RuntimeWarning: invalid value encountered in true_divide
+  (hb.get_array() / hbp.get_array()) / len(tileids),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:1002: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+  ax = plt.subplot(gs[1, ip])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:927: RuntimeWarning: divide by zero encountered in true_divide
+  rzp = -2.5 * np.log10(dp["FLUX_R"] / dp["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:929: RuntimeWarning: divide by zero encountered in true_divide
+  rz = -2.5 * np.log10(mydict["FLUX_R"] / mydict["FLUX_Z"])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:983: RuntimeWarning: invalid value encountered in true_divide
+  (hb.get_array() / hbp.get_array()) / len(tileids),
+/global/homes/f/forero/fiberassign/bin/fba_cmx:1002: MatplotlibDeprecationWarning: Adding an axes using the same arguments as a previous axes currently reuses the earlier instance.  In a future version, a new instance will always be created and returned.  Meanwhile, this warning can be suppressed, and the future behavior ensured, by passing a unique label to each axes instance.
+  ax = plt.subplot(gs[1, ip])
+/global/homes/f/forero/fiberassign/bin/fba_cmx:178: RuntimeWarning: invalid value encountered in true_divide
+  np.array(cs) / np.array(cps).astype(float),
