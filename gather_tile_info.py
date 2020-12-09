@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import fitsio
 from astropy.table import Table
 
-files = glob.glob("tiles_cmx_20201208/08*/fiberassign-*.fits.gz")
+files = glob.glob("tiles_cmx_20201208/all_tiles/fiberassign-*.fits.gz")
 tileid = []
 tilera = []
 tiledec = []

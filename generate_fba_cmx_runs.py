@@ -32,7 +32,7 @@ for i in range(len(tileids)):
         tileid = tileids[i]
         for flavor in flavors:
             run = print_run(flavor=flavor, intileid=tileid, 
-                            numberingid=numberingid, base_numbering=200)
+                            numberingid=numberingid, base_numbering=172)
             numberingid += 1
             print(run)
 
