@@ -1,0 +1,11 @@
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --intileid 541  --tileid 80541  --flavor dithlost  --outdir ./tiles_cmx_20201125/
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --intileid 1593  --tileid 81593  --flavor dithlost  --outdir ./tiles_cmx_20201125/
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --intileid 2898  --tileid 82898  --flavor dithlost  --outdir ./tiles_cmx_20201125/
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --intileid 3800  --tileid 83800  --flavor dithlost  --outdir ./tiles_cmx_20201125/
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --intileid 1605  --tileid 81605  --flavor dithlost  --outdir ./tiles_cmx_20201125/
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --intileid 1955  --tileid 81955  --flavor dithlost  --outdir ./tiles_cmx_20201125/
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --intileid 3064  --tileid 83064  --flavor dithlost  --outdir ./tiles_cmx_20201125/
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --intileid 1819  --tileid 81819  --flavor dithlost  --outdir ./tiles_cmx_20201125/
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --intileid 5358  --tileid 85358  --flavor dithlost  --outdir ./tiles_cmx_20201125/
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --intileid 402  --tileid 80402  --flavor dithlost  --outdir ./tiles_cmx_20201125/
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --intileid 419  --tileid 80419  --flavor dithlost  --outdir ./tiles_cmx_20201125/

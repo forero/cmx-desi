@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import fitsio
 from astropy.table import Table
 
-files = glob.glob("tiles_cmx_20201203/08*/fiberassign-*.fits.gz")
+files = glob.glob("tiles_cmx_20201208/08*/fiberassign-*.fits.gz")
 tileid = []
 tilera = []
 tiledec = []
@@ -28,10 +28,10 @@ for i in range(len(tilera)):
     indec.append(tiledec[i])
     
 plt.title("CMX_DITHLOST")
-plt.xlim([200,0])
+plt.xlim([250,0])
 plt.ylim([-30,90])
 plt.xlabel("RA [deg]")
 plt.ylabel("Dec. [deg]")
-plt.savefig("tiles_cmx_20201203/tile_summary.png")
+plt.savefig("tiles_cmx_20201208/all_tiles/tile_summary.png")
     
 
