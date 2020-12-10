@@ -1,0 +1,6 @@
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --tilera 18.4  --tiledec 28.34  --tileid 80254  --flavor dithprec  --outdir ./tiles_cmx_20201210/080254 &
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --tilera 40.0  --tiledec 29.49  --tileid 80267  --flavor dithprec  --outdir ./tiles_cmx_20201210/080267 &
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --tilera 57.24  --tiledec 27.53  --tileid 80280  --flavor dithprec  --outdir ./tiles_cmx_20201210/080280 &
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --tilera 111.64  --tiledec 30.0  --tileid 80293  --flavor dithprec  --outdir ./tiles_cmx_20201210/080293 &
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --tilera 130.26  --tiledec 25.95  --tileid 80306  --flavor dithprec  --outdir ./tiles_cmx_20201210/080306 &
+~/fiberassign/bin/./fba_cmx --dr dr9m --dtver 0.45.1 --rundate 2020-03-06T00:00:00 --seed 77  --tilera 151.11  --tiledec 27.19  --tileid 80319  --flavor dithprec  --outdir ./tiles_cmx_20201210/080319 &
