@@ -16,11 +16,11 @@ def print_run(flavor='science', tilera=0.0, tiledec=0.0, numberingid=1, base_num
     run += ' --tilera {} ' .format(tilera)
     run += ' --tiledec {} ' .format(tiledec)
     run += ' --tileid {} '.format(tileid)
-    run += ' --flavor {} '.format(flavor)
-    run += ' --outdir ./tiles_cmx_20201210/{:06d} &'.format(tileid)
+    run += ' --faflavor {} '.format(flavor)
+    run += ' --outdir ./tiles_cmx_20201212/{:06d} &'.format(tileid)
     return run
 
-data = np.loadtxt('cmx_dithprec_list.txt')
+data = np.loadtxt('cmx_dithprec_list_2.txt')
 flavors = ['dithprec']
 
 tileids = np.int_(data[:,0])
@@ -28,11 +28,11 @@ ra = data[:,1]
 dec = data[:,2]
 numberingid = 0
 for i in range(len(tileids)):
-    if ra[i] < 250.0 and np.abs(dec[i]-30)<20:
-        tileid = tileids[i]
-        for flavor in flavors:
-            run = print_run(flavor=flavor, tilera=ra[i], tiledec=dec[i],
-                            numberingid=numberingid, base_numbering=254)
-            numberingid += 13
-            print(run)
+ #   if ra[i] < 250.0 and np.abs(dec[i]-30)<20:
+    tileid = tileids[i]
+    for flavor in flavors:
+        run = print_run(flavor=flavor, tilera=ra[i], tiledec=dec[i],
+                            numberingid=numberingid, base_numbering=332)
+        numberingid += 13
+        print(run)
 
